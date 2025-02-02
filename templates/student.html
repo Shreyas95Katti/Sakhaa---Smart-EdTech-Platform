@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sakha</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <style>
+
+body {
+          background: linear-gradient(to bottom right, #ff0000, #0000ff);
+          background-repeat: no-repeat  ;
+          height: 100vh;
+        }
+    .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+
+
+.buttons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px 20px 20px; /* adjust the padding as needed */
+  margin-top: 120px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: #fff;
+  color: #333;
+}
+
+header{
+  text-align: center;
+}
+  </style>
+  <body>
+    <header>
+      <h1>STUDENT</h1>
+    </header>
+    <div class="content">
+      <div class="image">
+        <img height = 600px width = 500px src="https://innovationinpolitics.eu/wp-content/uploads/2020/03/jaredd-craig-HH4WBGNyltc-unsplash-1365x2048.jpg" alt="Image">
+      </div>
+      <div class="buttons">
+        <a href="{{ url_for('button1') }}"><button class="button1">Attendance</button></a>
+        <a href="{{ url_for('button2') }}"><button class="button2">Assignment</button></a>
+      </div>
+    </div>
+  </body>
+</html>

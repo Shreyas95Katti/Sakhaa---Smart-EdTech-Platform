@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2&family=Bree+Serif&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  </head>
+  <style>
+    .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 80px;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+  width: 700px; 
+  margin-left: 200px;
+}
+
+.buttons {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 20px 20px 20px; 
+  margin: 100px;
+}
+
+button {
+  padding: 20px;
+  margin: 20px;
+  border: none;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.4s ease-in-out; 
+}
+
+button:hover {
+  background-color: #fff;
+  color: #333;
+  box-shadow: 0px 0px 10px #333;
+  padding: 25px;
+}
+
+header{
+  text-align: center;
+  font-size: 20px;
+  color: black;
+}
+
+body{
+  background: linear-gradient(to bottom right, #c6c5ce, #b72121);
+          background-repeat: no-repeat  ;
+          height: 100vh;
+}
+  </style>
+  <body>
+    <header>
+      <h1>TEACHER</h1>
+    </header> 
+    <div class="content">
+      <div class="image">
+        <img src="https://e0.pxfuel.com/wallpapers/592/371/desktop-wallpaper-online-education-development-courses-by-pixel-point-on-dribbble-physical-education.jpg" alt="Image">
+      </div>
+      <div class="buttons">
+        <a href="{{ url_for('button1') }}"><button class="button1">Virtual White Board</button></a>
+        <a href="{{ url_for('button2') }}"><button class="button2">Proctor Examination</button></a>
+        <!-- <a href="{{ url_for('button2') }}"><button class="button2">Class</button></a>
+         -->
+         <form method="POST" action="/submit_data">
+          <button type="submit">Class</button>
+        </form>
+        
+         <h1>{{ classLink }}</h1>
+      </div>
+    </div>
+  </body>
+</html>
